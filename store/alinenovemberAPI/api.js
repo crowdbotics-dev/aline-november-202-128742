@@ -14,6 +14,27 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return alinenovemberAPI.post(`/api/v1/signup/`, payload)
 }
+function modules_files_uploads_list(payload) {
+  return alinenovemberAPI.get(`/modules/files/uploads/`)
+}
+function modules_files_uploads_create(payload) {
+  return alinenovemberAPI.post(`/modules/files/uploads/`, payload)
+}
+function modules_files_uploads_retrieve(payload) {
+  return alinenovemberAPI.get(`/modules/files/uploads/${payload.id}/`)
+}
+function modules_files_uploads_update(payload) {
+  return alinenovemberAPI.put(`/modules/files/uploads/${payload.id}/`, payload)
+}
+function modules_files_uploads_partial_update(payload) {
+  return alinenovemberAPI.patch(
+    `/modules/files/uploads/${payload.id}/`,
+    payload
+  )
+}
+function modules_files_uploads_destroy(payload) {
+  return alinenovemberAPI.delete(`/modules/files/uploads/${payload.id}/`)
+}
 function modules_two_factor_authentication_enable_2fa_retrieve(payload) {
   return alinenovemberAPI.get(`/modules/two-factor-authentication/enable/2fa`)
 }
@@ -80,6 +101,12 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_files_uploads_list,
+  modules_files_uploads_create,
+  modules_files_uploads_retrieve,
+  modules_files_uploads_update,
+  modules_files_uploads_partial_update,
+  modules_files_uploads_destroy,
   modules_two_factor_authentication_enable_2fa_retrieve,
   modules_two_factor_authentication_enable_2fa_create,
   modules_two_factor_authentication_enable_2fa_destroy,
