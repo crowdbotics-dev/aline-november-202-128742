@@ -61,6 +61,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-typeform-webhook](modules/typeform-webhook)
 - [react-native-articles](modules/articles)
 - [django-two-factor-authentication](backend/modules)
+- [django-files](backend/modules)
 
 # Getting started: Frontend
 
