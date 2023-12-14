@@ -8,8 +8,9 @@ class FileUploadViewSet(viewsets.ModelViewSet):
     """
     Ability to upload, get, update and delete the file.
     body_params: "title","description","user" and "file"
-    return: Return details about uploaded file. 
+    return: Return details about uploaded file.
     """
+
     serializer_class = FileUploadSerializer
     permission_classes = [permissions.AllowAny]
     authentication_classes = (
